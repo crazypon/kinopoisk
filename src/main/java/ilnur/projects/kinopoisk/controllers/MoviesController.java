@@ -3,6 +3,7 @@ package ilnur.projects.kinopoisk.controllers;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -13,6 +14,7 @@ import ilnur.projects.kinopoisk.entities.MovieRepository;
 
 @RestController
 @RequestMapping("/app/v1")
+@CrossOrigin
 public class MoviesController {
     
     @Autowired
@@ -29,5 +31,5 @@ public class MoviesController {
         Optional<Movie> movie = movieRepo.findMovieById(id);
         return movie.get();
     }
-    
+
 }
