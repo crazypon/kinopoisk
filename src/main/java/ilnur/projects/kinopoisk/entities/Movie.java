@@ -2,7 +2,10 @@ package ilnur.projects.kinopoisk.entities;
 
 import java.util.Set;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
@@ -25,6 +28,7 @@ public class Movie {
 
     private String title;
 
+    @Column(length = 1024)
     private String movieDescription;
 
     private Integer localRating;
@@ -33,7 +37,14 @@ public class Movie {
 
     private Integer rottenTomatoes;
 
+    private String filmDirector;
+
+    private String budget;
+
     private String mainCharacter;
+
+    @Enumerated(EnumType.STRING)
+    private Genres genre;
 
     private String imagePath;
 
@@ -42,4 +53,8 @@ public class Movie {
 
     @ManyToMany()
     private Set<Comment> comments;
+
+    public enum Genres {
+        FANTASY, HORROR, ACTION, FICTION, DOCUMENTARY, COMEDY
+    }
 }

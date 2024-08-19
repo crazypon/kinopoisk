@@ -5,8 +5,8 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import ilnur.projects.kinopoisk.entities.Movie;
@@ -27,7 +27,7 @@ public class MoviesController {
     }   
     
     @GetMapping("/movies/{id}")
-    public Movie showMovieDetails(@RequestParam Long id) {
+    public Movie showMovieDetails(@PathVariable Long id) {
         Optional<Movie> movie = movieRepo.findMovieById(id);
         return movie.get();
     }
