@@ -9,3 +9,9 @@ insert into movies(title, movie_description, local_rating, imdbrating, rotten_to
 
 insert into movies(title, movie_description, local_rating, imdbrating, rotten_tomatoes, budget, film_director, genre, main_character, image_path)
     values('Django', 'Шульц — эксцентричный охотник за головами, который выслеживает и отстреливает самых опасных преступников. Он освобождает раба по имени Джанго, поскольку тот может помочь ему в поисках трёх бандитов. Джанго знает этих парней в лицо, ведь у него с ними свои счёты', 8, 7, 8, '215 000 000', 'Kventin Tarantino', 'ACTION', 'Biber', 'django.jpg');
+
+
+insert into users(username) values('jonny');
+
+insert into comments(content) values ( 'Very nice movie, I like it so much!!!');
+insert into comments(content) values ('sheeeeeesh');
