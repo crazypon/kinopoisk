@@ -10,7 +10,6 @@ spring:
     url: jdbc:postgresql://localhost:5432/kinopoisk
     username: jarvis
     password: ilnur@089
-    initialize: false
 
   jpa:
     hibernate:

@@ -26,14 +26,6 @@ public class Comment {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long commentId;
 
-//    @ManyToOne()
-//    private User username;
-
-//    @JsonIgnoreProperties("comments")
-//    @ManyToOne
-//    @JoinColumn(name = "movie_id")
-//    private Movie movie;
-
     private String content;
 
 }

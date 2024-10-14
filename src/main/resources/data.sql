@@ -13,5 +13,5 @@ insert into movies(title, movie_description, local_rating, imdbrating, rotten_to
 
 insert into users(username) values('jonny');
 
-insert into comments(content) values ( 'Very nice movie, I like it so much!!!');
-insert into comments(content) values ('sheeeeeesh');
+insert into comments(movie_id, content) values ( 1, 'Very nice movie, I like it so much!!!');
+insert into comments(movie_id, content) values (1, 'sheeeeeesh');
